@@ -25,7 +25,7 @@ const AnecdoteList = () => {
     const votedAnecdote = anecdotes.filter(
       (anecdote) => anecdote.id === id
     )
-    console.log('voted', votedAnecdote[0].content)
+    //console.log('voted', votedAnecdote[0].content)
     dispatch(
       setNotification(`You voted "${votedAnecdote[0].content}"`)
     )
