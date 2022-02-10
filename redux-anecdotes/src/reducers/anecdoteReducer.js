@@ -43,10 +43,20 @@ export const initializeAcendotes = () => {
   }
 }
 
-export const voteAnecdote = (id) => {
-  return {
-    type: 'VOTE',
-    data: { id }
+export const voteAnecdote = (id, anecdoteToVote) => {
+  return async (dispatch) => {
+    const votedAnecdote = {
+      content: anecdoteToVote[0].content,
+      votes: anecdoteToVote[0].votes + 1
+    }
+    
+    //console.log('this is votedAnecdote:', votedAnecdote)
+
+    await anecdoteService.addLike(id, votedAnecdote)
+    dispatch({
+      type: 'VOTE',
+      data: { id }
+    })
   }
 }
 

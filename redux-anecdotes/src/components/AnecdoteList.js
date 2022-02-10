@@ -22,17 +22,18 @@ const AnecdoteList = () => {
 
   const vote = (id) => {
     console.log('vote', id)
-    const votedAnecdote = anecdotes.filter(
+    const anecdoteToVote = anecdotes.filter(
       (anecdote) => anecdote.id === id
     )
-    //console.log('voted', votedAnecdote[0].content)
-    dispatch(
-      setNotification(`You voted "${votedAnecdote[0].content}"`)
-    )
-    setTimeout(() => {
-      dispatch(clearNotification())
-    }, 3000)
-    dispatch(voteAnecdote(id))
+    //console.log('voted', anecdoteToVote[0].content)
+    //console.log('this is anecdoteToVote:', anecdoteToVote)
+    //dispatch(
+      //setNotification(`You voted "${votedAnecdote[0].content}"`)
+    //)
+    //setTimeout(() => {
+      //dispatch(clearNotification())
+    //}, 3000)
+    dispatch(voteAnecdote(id, anecdoteToVote))
   }
 
   return (

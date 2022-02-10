@@ -13,4 +13,11 @@ const createNew = async (content) => {
   return response.data
 }
 
-export default { getAll, createNew }
+const addLike = async (id, newObject) => {
+  const url = `${baseUrl}/${id}`
+  console.log('url to like:', url)
+  const response = await axios.put(url, newObject)
+  return response.data
+}
+
+export default { getAll, createNew, addLike }
