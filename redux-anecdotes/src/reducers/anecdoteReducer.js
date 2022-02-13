@@ -25,7 +25,7 @@ const reducer = (state = [], action) => {
 
 export const createAnecdote = (content) => {
   return async (dispatch) => {
-    const newAnecdote = await anecdoteService.createAnecdote(content)
+    const newAnecdote = await anecdoteService.createNew(content)
     dispatch({
       type: 'NEW ANECDOTE',
       data: newAnecdote
@@ -49,8 +49,6 @@ export const voteAnecdote = (id, anecdoteToVote) => {
       content: anecdoteToVote[0].content,
       votes: anecdoteToVote[0].votes + 1
     }
-    
-    //console.log('this is votedAnecdote:', votedAnecdote)
 
     await anecdoteService.addLike(id, votedAnecdote)
     dispatch({

@@ -15,7 +15,7 @@ const createNew = async (content) => {
 
 const addLike = async (id, newObject) => {
   const url = `${baseUrl}/${id}`
-  console.log('url to like:', url)
+  //console.log('url to like:', url)
   const response = await axios.put(url, newObject)
   return response.data
 }
