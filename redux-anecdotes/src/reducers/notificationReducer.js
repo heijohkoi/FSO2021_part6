@@ -1,4 +1,5 @@
 const initialState = ''
+let timeoutID = undefined
 
 const notificationReducer = (state = initialState, action) => {
   //console.log(action)
@@ -18,7 +19,11 @@ export const setNotification = (notification, duration) => {
       type: 'SET_NOTIFICATION',
       notification
     })
-    setTimeout(() => {
+
+    if (typeof timeoutID === 'number') {
+      clearTimeout(timeoutID)
+    }
+    timeoutID = setTimeout(() => {
       dispatch(clearNotification())
     }, duration * 1000)
   }

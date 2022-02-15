@@ -4,7 +4,6 @@ import { setFilter } from '../reducers/filterReducer'
 
 const Filter = (props) => {
   const handleChange = (event) => {
-    // input-kentän arvo muuttujassa event.target.value
     props.setFilter(event.target.value)
   }
   const style = {

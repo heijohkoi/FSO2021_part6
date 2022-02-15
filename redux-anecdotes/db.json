@@ -2,12 +2,12 @@
   "anecdotes": [
     {
       "content": "If it hurts, do it more often",
-      "votes": 5,
+      "votes": 21,
       "id": "47145"
     },
     {
       "content": "Adding manpower to a late software project makes it later!",
-      "votes": 7,
+      "votes": 27,
       "id": "21149"
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
-      "votes": 2,
+      "votes": 4,
       "id": "36975"
     },
     {
@@ -34,6 +34,11 @@
       "content": "Just another new test anecdote",
       "votes": 1,
       "id": "9RENnML"
+    },
+    {
+      "content": "One more time test",
+      "votes": 5,
+      "id": "P1-2rot"
     }
   ]
 }
